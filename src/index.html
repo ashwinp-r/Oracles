@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   </head>
 
@@ -49,18 +50,24 @@
     	<div class="btn-group" role="group" aria-label="Oracle Categories">
   		<button type="button" class="btn btn-dark active" aria-pressed="true">
 			All
-			 <span class="badge badge-light">15</span>
+			 <span class="badge badge-light">14</span>
 		</button>
 		<div class="btn-group" role="group">
-    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Schelling Point</button>
+    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Schelling Point
+			 	<span class="badge badge-light">7</span>
+			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      				<a class="dropdown-item" href="#">All</a>
+      				<a class="dropdown-item" href="#" onclick="myFunction('SchellingPoint');">All</a>
       				<a class="dropdown-item" href="#">Historical</a>
       				<a class="dropdown-item" href="#">Modern</a>
     			</div>
   		</div>
   		<div class="btn-group" role="group">
-    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">API</button>
+    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				API
+			 	<span class="badge badge-light">5</span>
+			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
       				<a class="dropdown-item" href="#">All</a>
       				<a class="dropdown-item" href="#">Decentralized</a>
@@ -68,7 +75,10 @@
     			</div>
   		</div>
   		<div class="btn-group" role="group">
-    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Other</button>
+    			<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Other
+			 	<span class="badge badge-light">2</span>
+			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
       				<a class="dropdown-item" href="#">All</a>
       				<a class="dropdown-item" href="#">AMM</a>
@@ -80,8 +90,8 @@
     </div>
 
 
-  <div class="card-columns mt-3 ml-3 mr-3">
-  	<div class="card text-white bg-dark">
+  <div class="card-columns mt-3 ml-5">
+  	<div class="card text-white bg-dark" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/Compound.png" alt="Compound Finance">
     		<div class="card-body">
       			<h5 class="card-title">Compound Finance</h5>
@@ -123,7 +133,7 @@
       			<p class="card-text">A proposed decentralized, trustless, and community governed oracle.</p>
     		</div>
   	</div>
-  	<div class="card text-white bg-dark">
+  	<div class="card text-white bg-dark" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/Uniswap.png" alt="Uniswap">
     		<div class="card-body">
       			<h5 class="card-title">Uniswap V1/2</h5>
@@ -137,7 +147,7 @@
       			<p class="card-text">On-chain, batch auction based DEX that can be used for price discovery.</p>
     		</div>
   	</div>
-  	<div class="card text-white bg-dark">
+  	<div class="card text-white bg-dark" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/HiveMind.png" alt="HiveMind">
     		<div class="card-body">
       			<h5 class="card-title">TruthCoin/HiveMind</h5>
@@ -151,28 +161,28 @@
       			<p class="card-text">Historical, decentralized, Bitcoin price oracle service.</p>
     		</div>
   	</div>
-  	<div class="card text-white bg-dark">
+  	<div class="card text-white bg-dark" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/SchellingCoin.png" alt="SchellingCoin">
     		<div class="card-body">
       			<h5 class="card-title">SchellingCoin</h5>
       			<p class="card-text">Historical, decentralized, Ethereum based price oracle. Variation now used for RANDAO.</p>
     		</div>
   	</div>
-  	<div class="card p-3 text-black">
+  	<div class="card p-3 text-black" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/UMA.png" alt="UMA">
     		<div class="card-body">
       			<h5 class="card-title">UMA V2</h5>
       			<p class="card-text">Schelling point oracle service with built-in economic incentives.</p>
     		</div>
   	</div>
-  	<div class="card p-3 text-white bg-dark">
+  	<div class="card p-3 text-white bg-dark" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/amoveo.jpg" alt="Amoveo">
     		<div class="card-body">
       			<h5 class="card-title">Amoveo</h5>
       			<p class="card-text">.</p>
     		</div>
   	</div>
-  	<div class="card text-black">
+  	<div class="card text-black" style="width: 25rem;">
     		<img class="card-img-top" src="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/SVG/augur.png" alt="Augur">
     		<div class="card-body">
       			<h5 class="card-title">Augur</h5>
