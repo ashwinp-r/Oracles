@@ -2,7 +2,7 @@ function myFunction(value) {
     var filter, cards, cardContainer, h5, keep_card, card_titles, badge_texts, i, j;
 
     filter = value.toUpperCase();
-    cardContainer = document.getElementById("myItems");
+    cardContainer = document.getElementById("allCards");
     cards = cardContainer.getElementsByClassName("card");
     for (i = 0; i < cards.length; i++) {
         //We will switch keep_card to true if we find search text in badge or title
