@@ -3,7 +3,7 @@ function filterAll(values) {
 
     filter = []
     for (i = 0; i < values.length; i++) {
-	filter.append(values[i].toUpperCase());
+	filter.push(values[i].toUpperCase());
     }
     cardContainer = document.getElementById("allCards");
     cards = cardContainer.getElementsByClassName("card");
