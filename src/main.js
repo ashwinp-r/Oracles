@@ -1,7 +1,10 @@
-function myFunction(value) {
+function filterAll(values) {
     var filter, cards, cardContainer, h5, keep_card, card_titles, badge_texts, i, j;
 
-    filter = value.toUpperCase();
+    filter = []
+    for (i = 0; i < values.length; i++) {
+	filter.append(values[i].toUpperCase();
+    }
     cardContainer = document.getElementById("allCards");
     cards = cardContainer.getElementsByClassName("card");
     for (i = 0; i < cards.length; i++) {
@@ -13,12 +16,14 @@ function myFunction(value) {
 
         //You must loop through all card titles.
         for(j = 0; j < card_titles.length; j++) {
-            if (card_titles[j].innerText.toUpperCase().indexOf(filter) > -1) {
-                //Found search text, now lets switch keep_card on
-                keep_card = true;
-                //No need for further looping, we found the card, there we break loop
-                break;
-            }
+        	for(i = 0; i < values.length; i++) {
+            		if (card_titles[j].innerText.toUpperCase().indexOf(values[i]) > -1) {
+                		//Found search text, now lets switch keep_card on
+                		keep_card = true;
+                		//No need for further looping, we found the card, there we break loop
+                		break;
+			}
+            	}
         }
 
         if(!keep_card) {
