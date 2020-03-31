@@ -1,9 +1,9 @@
 function filterAll(values) {
-    var filter, cards, cardContainer, h5, keep_card, card_titles, badge_texts, i, j;
+    var cards, cardContainer, h5, keep_card, card_titles, badge_texts, i, j;
 
-    filter = []
+    var filter = [];
     for (i = 0; i < values.length; i++) {
-	filter.push(values[i].toUpperCase());
+    	filter.push(values[i].toUpperCase());
     }
     cardContainer = document.getElementById("allCards");
     cards = cardContainer.getElementsByClassName("card");
@@ -16,22 +16,24 @@ function filterAll(values) {
 
         //You must loop through all card titles.
         for(j = 0; j < card_titles.length; j++) {
-        	for(i = 0; i < values.length; i++) {
-            		if (card_titles[j].innerText.toUpperCase().indexOf(values[i]) > -1) {
-                		//Found search text, now lets switch keep_card on
-                		keep_card = true;
-                		//No need for further looping, we found the card, there we break loop
-                		break;
-			}
-            	}
+	   for (z = 0; z < filter.length; z++) {
+             if (card_titles[j].innerText.toUpperCase().indexOf(filter[z]) > -1) {
+                //Found search text, now lets switch keep_card on
+                keep_card = true;
+                //No need for further looping, we found the card, there we break loop
+                break;
+	     }
+	   }
         }
 
         if(!keep_card) {
             for(j = 0; j < badge_texts.length; j++) {
-                if (badge_texts[j].innerText.toUpperCase().indexOf(filter) > -1) {
+	      for (z = 0; z < filter.length; z++) {
+                if (badge_texts[j].innerText.toUpperCase().indexOf(filter[z]) > -1) {
                     keep_card = true;
                     break;
                 }
+	      }
             }
         }
 

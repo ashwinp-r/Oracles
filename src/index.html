@@ -48,7 +48,7 @@
 
     <div class="col-md-12 + text-center">
     	<div class="btn-group" role="group" aria-label="Oracle Categories">
-  		<button type="button" class="btn btn-dark active" aria-pressed="true">
+  		<button type="button" class="btn btn-dark active" aria-pressed="true" onclick="filterAll(['Augur', 'Dfusion', 'Uniswap', 'Maker', 'Chainlink', 'Compound Open Oracle', 'Compound', 'Provable', 'UMA', 'Tellor', 'Amoveo', 'SchellingCoin', 'TruthCoin', 'Orisi']);">
 			All
 			 <span class="badge badge-light">14</span>
 		</button>
@@ -58,9 +58,9 @@
 			 	<span class="badge badge-light">7</span>
 			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      				<a class="dropdown-item" href="#" onclick="filterAll(['Augur', 'UMA']);">All</a>
-      				<a class="dropdown-item" href="#">Historical</a>
-      				<a class="dropdown-item" href="#">Modern</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Augur', 'UMA', 'Tellor', 'Amoveo', 'SchellingCoin', 'TruthCoin', 'Orisi']);">All</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['SchellingCoin', 'TruthCoin', 'Orisi']);">> Historical</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Augur', 'UMA', 'Tellor', 'Amoveo']);">> Modern</a>
     			</div>
   		</div>
   		<div class="btn-group" role="group">
@@ -69,9 +69,9 @@
 			 	<span class="badge badge-light">5</span>
 			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      				<a class="dropdown-item" href="#">All</a>
-      				<a class="dropdown-item" href="#">Decentralized</a>
-      				<a class="dropdown-item" href="#">Centralized</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Provable', 'Compound', 'Chainlink', 'Maker', 'Compound Open Oracle']);">All</a>
+				<a class="dropdown-item" href="#" onclick="filterAll(['Maker', 'Chainlink', 'Compound Open Oracle']);">> Decentralized</a>
+				<a class="dropdown-item" href="#" onclick="filterAll(['Provable', 'Compound Finance']);">> Centralized</a>
     			</div>
   		</div>
   		<div class="btn-group" role="group">
@@ -80,9 +80,9 @@
 			 	<span class="badge badge-light">2</span>
 			</button>
     			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      				<a class="dropdown-item" href="#">All</a>
-      				<a class="dropdown-item" href="#">AMM</a>
-      				<a class="dropdown-item" href="#">Auction</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Uniswap', 'Dfusion']);">All</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Uniswap']);">> AMM</a>
+      				<a class="dropdown-item" href="#" onclick="filterAll(['Dfusion']);">> Auction</a>
     			</div>
   		</div>
 
