@@ -6,15 +6,16 @@
     <meta name="description" content="An interactive oracle explorer">
     <meta name="author" content="Ashwin">
 
-    <title>Curated Oracles</title>
+    <title>The Oracle Club</title>
     <link rel="shortcut icon" href="https://uploads-ssl.webflow.com/5d8bc9d83aa68355ffa135b0/5d8bc9d83aa6831623a1360a_favicon-32x32.png" type="image/x-icon">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
+    <link rel="import" href="https://raw.githubusercontent.com/ashwinp-r/InteractiveMarketMap/master/src/compound.html">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   </head>
 
@@ -97,6 +98,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Compound Finance</h5>
       			<p class="card-text">The current Compound oracle.</p>
+			<a href="compound.html" class="stretched-link" data-toggle="modal" data-target="#compound"></a>
     		</div>
   	</div>
   	<div class="card ml-5 p-3 text-black" style="width: 18rem;">
@@ -104,6 +106,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Provable Things</h5>
       			<p class="card-text">The Provable Things oracle, formerly known as Oraclize.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 p-3 text-white bg-dark" style="width:18rem;">
@@ -111,6 +114,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Tellor</h5>
       			<p class="card-text">An Ethereum oracle that uses PoW.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 p-3 text-black" style="width:18rem;">
@@ -118,6 +122,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Chainlink</h5>
       			<p class="card-text">A decentralized, but trusted oracle service.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 text-white bg-dark" style="width:18rem;">
@@ -125,6 +130,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Maker</h5>
       			<p class="card-text">A decentralized, community governed oracle.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 text-black" style="width:18rem;">
@@ -132,6 +138,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Compound Open Oracle</h5>
       			<p class="card-text">A proposed decentralized, trustless, and community governed oracle.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card text-white bg-dark" style="width: 25rem;">
@@ -139,6 +146,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Uniswap V1/2</h5>
       			<p class="card-text">A constant product, on-chain AMM, that also functions as a surprisingly good price oracle.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 text-black"  style="width:10rem;">
@@ -146,6 +154,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Dfusion</h5>
       			<p class="card-text">On-chain, batch auction based DEX that can be used for price discovery.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card text-white bg-dark" style="width: 25rem;">
@@ -153,6 +162,7 @@
     		<div class="card-body">
       			<h5 class="card-title">TruthCoin/HiveMind</h5>
       			<p class="card-text">Historical/Modern, proposed, schelling point prediction market.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card ml-5 p-3 text-black"  style="width:18rem;">
@@ -160,6 +170,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Orisi</h5>
       			<p class="card-text">Historical, decentralized, Bitcoin price oracle service.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card text-white bg-dark" style="width: 25rem;">
@@ -167,6 +178,7 @@
     		<div class="card-body">
       			<h5 class="card-title">SchellingCoin</h5>
       			<p class="card-text">Historical, decentralized, Ethereum based price oracle. Variation now used for RANDAO.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card p-3 text-black" style="width: 25rem;">
@@ -174,6 +186,7 @@
     		<div class="card-body">
       			<h5 class="card-title">UMA V2</h5>
       			<p class="card-text">Schelling point oracle service with built-in economic incentives.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card p-3 text-white bg-dark" style="width: 25rem;">
@@ -181,6 +194,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Amoveo</h5>
       			<p class="card-text">.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   	<div class="card text-black" style="width: 25rem;">
@@ -188,6 +202,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Augur</h5>
       			<p class="card-text">Schelling Point prediction market that can also be used for price discovery.</p>
+			<a href="#" class="stretched-link"></a>
     		</div>
   	</div>
   </div>
