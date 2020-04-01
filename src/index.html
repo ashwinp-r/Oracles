@@ -14,8 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
-    <link rel="import" href="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/src/compound.html">
+    <script stype="text/javascript" src="{{ url_for('static', filename='main.js') }}></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   </head>
 
@@ -98,7 +97,7 @@
     		<div class="card-body">
       			<h5 class="card-title">Compound Finance</h5>
       			<p class="card-text">The current Compound oracle.</p>
-			<a href="compound.html" class="stretched-link" data-toggle="modal" data-target="#compound"></a>
+			<a href="https://raw.githubusercontent.com/ashwinp-r/Oracles/master/src/compound.htm" class="stretched-link" data-toggle="modal" data-target="#compound"></a>
     		</div>
   	</div>
   	<div class="card ml-5 p-3 text-black" style="width: 18rem;">
@@ -210,6 +209,34 @@
   <div class="modal fade" id="compound" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   	<div class="modal-dialog" role="document">
   		<div class="modal-content">
+	 		<div class="modal-header">
+  			<h5 class="modal-title" id="exampleModalLongTitle">Compound</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+ \tThe decentralized lending platform Compound uses a custom application-specific price oracle.
+
+	While still API based, Compound’s oracle is a single, centralized poster (price gathering script) that pulls the price of all assets relative to Ether from many different exchange sources. This trusted party then posts price updates to the blockchain every time it detects a 1% movement in price. The reported price must be within 10% of an anchor price that is updated every hour. Larger price movements must be set using a human and corresponding, specific hardware key. This key is currently controlled by the Compound team.
+
+	Compound has also developed a second oracle design they call the Compound Open Oracle System. Using the Open Oracle system, anyone wishing to report a price can do so. This report is then propagated via a p2p network to all other nodes in the system. Anyone with gas and a connection to Ethereum can then post the signed price data on-chain. A single on-chain contract, known as the Data Contract, is responsible for holding the price information. The contract divides the reported information by price reporter. Any on-chain application can request to view the provided price data by selecting a subset of the reported price feeds. While Compound expects to productionize this oracle in the near future (recently completing audits).
+
+Pros
+Fast
+Updates are frequent and response times are fast
+Useful for price feeds
+
+Cons
+Centralized
+Compound retains sole ownership over the oracle’s reported prices
+Trusted
+Users must trust Compound to provide the correct pricing data
+
+         </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+        </div>
 		</div>
 	</div>
   </div>
